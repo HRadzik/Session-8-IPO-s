@@ -1,20 +1,20 @@
 #Hubert Radzik
-# Function
+#Function
 def compute_total(quantity, price):
     total = quantity * price
     if total > 10000:
         total = total * 0.90  # 10% discount
     return total
-# Main Program
+#Main Program
 total_sum = 0
 while True:
-    # Input Phase
+    #Input Phase
     quantity = float(input("Enter quantity: "))
     price = float(input("Enter price: "))
-    # Processing Phase
+    #Processing Phase
     total = compute_total(quantity, price)
     total_sum += total
-    # Output Phase
+    #Output Phase
     print("Quantity:", quantity)
     print("Price:", price)
     print("Total:", total)
