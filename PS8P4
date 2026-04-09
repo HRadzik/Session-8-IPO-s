@@ -1,0 +1,32 @@
+#Hubert Radzik
+#Function
+def get_pay_rate(job_code):
+    if job_code == "L":
+        return 25
+    elif job_code == "A":
+        return 30
+    elif job_code == "J":
+        return 50
+    else:
+        return 0
+#Main Program
+total_gross = 0
+while True:
+    #Input Phase
+    last_name = input("Enter employee last name: ")
+    job_code = input("Enter job code (L, A, J): ").upper()
+    hours = float(input("Enter hours worked: "))
+    #Processing Phase
+    rate = get_pay_rate(job_code)
+    if hours > 40:
+        gross = (40 * rate) + ((hours - 40) * rate * 1.5)
+    else:
+        gross = hours * rate
+    total_gross += gross
+    #Output Phase
+    print("Employee:", last_name)
+    print("Gross Pay:", gross)
+    cont = input("Do you want to continue? (Yes/No): ")
+    if cont.lower() != "yes":
+        break
+print("Total Gross Pay:", total_gross)
