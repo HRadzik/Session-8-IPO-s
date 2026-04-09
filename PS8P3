@@ -1,0 +1,24 @@
+#Hubert Radzik
+#Function
+def compute_mpg(miles, gallons):
+    if gallons == 0:
+        return 0
+    return miles / gallons
+#Main Program
+trip_count = 0
+while True:
+    #Input Phase
+    city = input("Enter destination city: ")
+    miles = float(input("Enter miles traveled: "))
+    gallons = float(input("Enter gallons used: "))
+    #Processing Phase
+    mpg = compute_mpg(miles, gallons)
+    trip_count += 1
+    #Output Phase
+    print("City:", city)
+    print("Miles:", miles)
+    print("MPG:", mpg)
+    cont = input("Do you want to continue? (Yes/No): ")
+    if cont.lower() != "yes":
+        break
+print("Number of trips:", trip_count)
