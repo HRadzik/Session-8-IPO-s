@@ -1,0 +1,26 @@
+#Hubert Radzik
+#Function
+def compute_tuition(credits, district_code):
+    if district_code == "I":
+        return credits * 250
+    elif district_code == "O":
+        return credits * 550
+    else:
+        return 0
+#Main Program
+total_tuition = 0
+while True:
+    #Input Phase
+    last_name = input("Enter student last name: ")
+    credits = float(input("Enter credit hours: "))
+    district_code = input("Enter district code (I/O): ").upper()
+    #Processing Phase
+    tuition = compute_tuition(credits, district_code)
+    total_tuition += tuition
+    #Output Phase
+    print("Student:", last_name)
+    print("Tuition Owed:", tuition)
+    cont = input("Do you want to continue? (Yes/No): ")
+    if cont.lower() != "yes":
+        break
+print("Total Tuition Owed:", total_tuition)
