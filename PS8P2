@@ -1,20 +1,20 @@
 #Hubert Radzik
-# Function
+#Function
 def batting_average(hits, at_bats):
     if at_bats == 0:
         return 0
     return hits / at_bats
-# Main Program
+#Main Program
 count = 0
 while True:
-    # Input Phase
+    #Input Phase
     last_name = input("Enter player's last name: ")
     hits = float(input("Enter number of hits: "))
     at_bats = float(input("Enter number of at bats: "))
-    # Processing Phase
+    #Processing Phase
     avg = batting_average(hits, at_bats)
     count += 1
-    # Output Phase
+    #Output Phase
     print("Player:", last_name)
     print("Batting Average:", avg)
     cont = input("Do you want to continue? (Yes/No): ")
